@@ -19,7 +19,7 @@ library(e1071)
 library(openxlsx)
 library(MLmetrics)
 #Read the excel file
-s <- read_excel("USD/EUR.xlsx")
+s <- read_excel("ExchangeUSD.xlsx")
 str(s)
 
 ######STEP1: DATA COLLECTION#####
