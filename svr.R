@@ -1,11 +1,11 @@
 ### MADE BY  ####
-#3rd Objective: SVR nn
+# SVR - Neural Network
 #Made by:Paraskevi Sifnaiou
 ###############
 
 ####IMPORT DATA######
-#I set my environment
-setwd("C:/Users/sifne/Desktop/data_mining_CW1_w1707896")
+#Set environment
+setwd("C:/Users/")
 #Import the packages
 library(fpp)
 library(MASS)
@@ -19,8 +19,9 @@ library(e1071)
 library(openxlsx)
 library(MLmetrics)
 #Read the excel file
-s <- read_excel("Whitewine.xlsx")
+s <- read_excel("USD/EUR.xlsx")
 str(s)
+
 ######STEP1: DATA COLLECTION#####
 # Y1: 3 input vectors
 #y_t
@@ -53,6 +54,7 @@ exchange_model1.1 <- svm( Output  ~ . ,data = exchange_train1 , type="eps-regres
 pred1.1<-predict(exchange_model1.1,exchange_test1) 
 
 ######BEST MODEL 1.1######
+
 svm_tune <- tune(svm, Output ~ Input1+Input2+Input3 ,data = exchange_train1 ,ranges = list(epsilon = seq(0,1,0.01), cost = seq(1,5,1),scale=F))
 print(svm_tune)
 
