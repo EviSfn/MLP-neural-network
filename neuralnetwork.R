@@ -1,11 +1,11 @@
 ### MADE BY  ####
-#3rd Objective: SVR
+#SVR
 #Made by:Paraskevi Sifnaiou
 ############
 
 ####IMPORT DATA######
 #Set environment
-setwd("C:/Users/sifne/Desktop/data_mining_CW1_w1707896")
+setwd("C:/Users/")
 #Import the packages
 library(fpp)
 library(MASS)
